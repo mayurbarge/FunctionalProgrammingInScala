@@ -1,0 +1,17 @@
+// JsonWrites for case class: Custom implementation
+import play.api.libs.json.{JsValue, Json, Writes}
+case class Foo(a:Int, b:String)
+
+implicit val writer = new Writes[Foo] {
+  def writes(foo: Foo): JsValue = {
+    Json.arr(foo.a,foo.b)
+  }
+}
+
+val foo = Foo(7,"h")
+
+val unprunedJson: JsValue = Json.toJson(foo)
+
+
+
+
