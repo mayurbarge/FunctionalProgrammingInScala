@@ -25,5 +25,8 @@ bird1.fly
 
 val list = List("SP","BP","SMI","ADS")
 
-list.takeWhile(_.("SMI"))
 
+
+None.get
+
+Ordering

@@ -50,7 +50,7 @@ object Main {
       Thread.currentThread().wait(5)
       throw new Exception})
     //val statsCollector =  new TimeoutStatsCollector with TimeoutStats with TimeoutStats2
-   // await(futureX)
+    await(futureX)
 
   }
 }
