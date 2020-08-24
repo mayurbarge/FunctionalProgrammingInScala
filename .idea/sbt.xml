@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ScalaSbtSettings">
-    <option name="customVMEnabled" value="true" />
-    <option name="customVMPath" value="/Library/Java/JavaVirtualMachines/openjdk-11.0.1.jdk/Contents/Home" />
+    <option name="customVMPath" />
     <option name="linkedExternalProjectsSettings">
       <SbtProjectSettings>
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -12,7 +11,8 @@
             <option value="$PROJECT_DIR$/project" />
           </set>
         </option>
-        <option name="sbtVersion" value="0.13.13" />
+        <option name="sbtVersion" value="1.2.6" />
+        <option name="useQualifiedModuleNames" value="true" />
       </SbtProjectSettings>
     </option>
   </component>

@@ -9,6 +9,7 @@ sealed trait List[+A] {
 
   // foldRight is non tail-recursive
   // evaluation is recursive and depends upon foldRight to return value for evaluating f
+  // foldRight can be treated as constructor replacement
   def foldRight[B](z:B)(f:(A,B)=>B):B = {
     this match {
       case Nil => z
@@ -112,6 +113,8 @@ val partialResult: ((Int) => Boolean) => List[Int] = List dropWhile list2
 
 List(1,2,3).foldLeft[Int](0)((acc,e)=>acc+e)
 List(1,2,3).foldRight[Int](1)((acc,e)=>acc*e)
+
+List(1,2,3).foldRight(Nil: List[Int],Cons(_,_))
 
 /*
 def foldRight[A,B](as:List[A],z:B)(f:(A,B)=>B):B = {
